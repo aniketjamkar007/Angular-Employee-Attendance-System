@@ -1,3 +1,32 @@
-<p>
-  emp-list works!
-</p>
+<div class="container container-margin">
+  <p>
+    emp-list works!
+  </p>
+  <div class="row">
+    <div class="col-xs-12 col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2">
+      <table class="table table-hover">
+        <thead>
+          <tr>
+            <th>Emp No</th>
+            <th>Emp Name</th>
+            <th>Email</th>
+            <th>Attendance</th>
+            <th>Leaves</th>
+            <th><button class="btn btn-primary" (click)="getPercentage()">Attendance(%)</button></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor = "let employee of employeeList">
+            <td>{{employee.empID}}</td>
+            <td><a [routerLink]="['/empdetails',employee.empID]">{{employee.firstName}} {{employee.lastName}}</a></td>
+            <td>{{employee.email}}</td>
+            <td>{{employee.attendance}}</td>
+            <td>{{employee.leaves}}</td>
+            <td>{{percentage | percent:'2.2-3' }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+  <router-outlet></router-outlet>

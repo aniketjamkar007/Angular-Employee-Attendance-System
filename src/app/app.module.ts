@@ -22,6 +22,7 @@ import { MarkAttendanceComponent } from './mark-attendance/mark-attendance.compo
 import { EmpListComponent } from './emp-list/emp-list.component';
 
 const appRoutes: Routes = [
+  { path: 'emplist', component: EmpListComponent },
   { path: 'markattendance', component: MarkAttendanceComponent },
   { path: 'empdetails', canActivate: [EmpDetailsGuard], component: EmpDetailsComponent },
   { path: 'empdetails/:id', canActivate: [EmpDetailsGuard], component: EmpDetailsComponent }
