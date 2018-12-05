@@ -1,0 +1,30 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2">
+      <!-- <p>
+        emp-details works!
+      </p> -->
+      <mat-card *ngIf= "employee">
+          <mat-card-title>{{employee.firstName}} {{employee.lastName}}</mat-card-title>
+
+          <mat-card-content>
+            <!-- Mail: {{employee.email}}<br>
+            Present Days: {{employee.attendance}}<br>
+            Absent Days: {{employee.leaves}} <br>
+            Percentage: {{showPercentage}} -->
+            Mail: {{employee.email}}<br>
+            Percentage: {{showPercentage | percent:'2.2-3'}}
+            <div style="display: block">
+              <canvas baseChart
+                      [data]="pieChartData"
+                      [labels]="pieChartLabels"
+                      [chartType]="pieChartType"
+                      (chartHover)="chartHovered($event)"
+                      (chartClick)="chartClicked($event)"></canvas>
+              </div>
+          </mat-card-content> 
+      </mat-card> 
+
+    </div>
+  </div>
+</div>

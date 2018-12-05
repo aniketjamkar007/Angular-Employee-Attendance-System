@@ -1,0 +1,18 @@
+[{
+    "empID": 1,
+    "firstName": "John",
+    "lastName": "Doe",
+    "email": "john@example.com"
+  },
+  {
+    "empID": 2,
+    "firstName": "Mary",
+    "lastName": "Moe",
+    "email": "mary@example.com"
+  },
+  {
+    "empID": 3,
+    "firstName": "July",
+    "lastName": "Dooley",
+    "email": "july@example.com"
+  }]
