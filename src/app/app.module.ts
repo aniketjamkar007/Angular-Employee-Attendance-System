@@ -10,6 +10,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
+import { MatTabsModule } from '@angular/material/tabs';
 import { ChartsModule } from 'ng2-charts';
 
 import { AppComponent } from './app.component';
@@ -49,6 +50,7 @@ const appRoutes: Routes = [
     MatButtonModule,
     MatDatepickerModule,
     MatCardModule,
+    MatTabsModule,
     ChartsModule,
     HttpClientModule,
     RouterModule.forRoot(appRoutes)

@@ -15,7 +15,7 @@ export class MarkAttendanceComponent implements OnInit {
   date1: any;
   date2: any;
   timediff: number;
-  diffDays: number;
+  noOfDays: number;
   leaves: number;
   inputValue: number;
   employeeID: number;
@@ -65,11 +65,14 @@ export class MarkAttendanceComponent implements OnInit {
 
     empid = empid - 1;
     if ( this.timediff >= 0 && this.employeeID === empid) {
-      this.diffDays = Math.ceil(this.timediff / (1000 * 3600 * 24));
+      this.noOfDays = Math.ceil(this.timediff / (1000 * 3600 * 24)) + 1;
       // console.log( this.date2 + '-' + this.date1 + '=' + this.diffDays);
-      this.finalAttendance = this.diffDays - this.leaves;
+      this.finalAttendance = this.noOfDays - this.leaves;
       this.employeeList[empid].attendance = this.finalAttendance;
-      console.log( this.employeeList[empid].attendance);
+      // console.log( this.employeeList[empid].attendance);
+      this.employeeList[empid].percentage = (this.finalAttendance / this.noOfDays );
+      // console.log(this.employeeList[empid].percentage);
+      // this.onSave(empid);
     } else {
       alert('Please select date greater than ' + this.dates[0].split('-')[2] );
     }

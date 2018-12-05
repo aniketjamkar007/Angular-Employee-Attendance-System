@@ -1,11 +1,34 @@
 <!-- <div class="container">
     <div class="row"> -->
         <!-- <div class="col-xs-12 col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2"> -->
-            <ul>
+            <!-- <ul>
                 <li><a [routerLink]="['/emplist']">Employee List</a></li>
-                <li><a [routerLink]="['/markattendance']">Mark Attendance</a></li>
+                <li><a [routerLink]="['/markattendance']">Mark Attendance</a></li> -->
                <!-- <li><a [routerLink]="['/empdetails']">Employee-Details</a></li> -->
-            </ul>
+            <!-- </ul> -->
+            <nav mat-tab-nav-bar>
+                <a mat-tab-link
+                [routerLink]="['/emplist']"
+                routerLinkActive #rla1="routerLinkActive"
+                [active]="rla1.isActive"
+                [ngStyle]="{backgroundColor: rla1.isActive ? 'lightblue': 'transparent'}">
+                Employee List
+                </a>
+                <a mat-tab-link
+                [routerLink]="['/markattendance']"
+                routerLinkActive #rla2="routerLinkActive"
+                [active]="rla2.isActive"
+                [ngStyle]="{backgroundColor: rla2.isActive ? 'lightblue': 'transparent'}">
+                Mark Attendance
+                </a>
+                <a mat-tab-link
+                [routerLink]="['/empdetails']"
+                routerLinkActive #rla3="routerLinkActive"
+                [active]="rla3.isActive"
+                [ngStyle]="{backgroundColor: rla3.isActive ? 'lightblue': 'transparent'}">
+                Employee Details
+                </a>
+            </nav>
         <!-- </div> -->
     <!-- </div>
 </div>  -->

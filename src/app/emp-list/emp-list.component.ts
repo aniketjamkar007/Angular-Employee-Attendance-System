@@ -9,7 +9,8 @@ import { Employee } from '../employee';
 })
 export class EmpListComponent implements OnInit {
   employeeList: Employee[];
-  percentage: number;
+  percentage: Array<number>;
+  empId: number;
   constructor(private service: EmployeeService) { }
 
   ngOnInit() {
@@ -21,7 +22,8 @@ export class EmpListComponent implements OnInit {
 
   getPercentage() {
     this.employeeList.forEach((element) => {
-      this.percentage = element.attendance / (element.attendance + element.leaves);
+      this.empId = element.empID - 1;
+      this.percentage.fill(element.attendance / (element.attendance + element.leaves), this.empId, this.empId);
     });
   }
 

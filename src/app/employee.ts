@@ -5,4 +5,5 @@ export interface Employee {
     email: string;
     attendance: number;
     leaves: number;
+    percentage: number;
 }

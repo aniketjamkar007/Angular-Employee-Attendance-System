@@ -8,19 +8,20 @@ import { tap } from 'rxjs/operators';
 })
 export class EmployeeService {
   employeeList: Employee[];
-  private JSONUrl = 'https://ng-emp-attendance.firebaseio.com/employee.json';
+  private firebaseUrl = 'https://ng-emp-attendance.firebaseio.com/employee.json';
+  // private JSONUrl = '/assets/employee.json';
 
   constructor(private http: HttpClient) { }
 
   getEmployees() {
-    return this.http.get<Employee[]>(this.JSONUrl)
+    return this.http.get<Employee[]>(this.firebaseUrl)
     .pipe(
       tap(data => this.employeeList = data)
     );
   }
 
   saveEmployeeList(data) {
-    return this.http.put(this.JSONUrl, data);
+    return this.http.put(this.firebaseUrl, data);
   }
 
 }

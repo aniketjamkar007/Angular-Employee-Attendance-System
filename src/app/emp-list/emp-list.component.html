@@ -1,7 +1,7 @@
 <div class="container container-margin">
-  <p>
+  <!-- <p>
     emp-list works!
-  </p>
+  </p> -->
   <div class="row">
     <div class="col-xs-12 col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2">
       <table class="table table-hover">
@@ -12,7 +12,7 @@
             <th>Email</th>
             <th>Attendance</th>
             <th>Leaves</th>
-            <th><button class="btn btn-primary" (click)="getPercentage()">Attendance(%)</button></th>
+            <th>Attendance(%)</th>
           </tr>
         </thead>
         <tbody>
@@ -22,7 +22,7 @@
             <td>{{employee.email}}</td>
             <td>{{employee.attendance}}</td>
             <td>{{employee.leaves}}</td>
-            <td>{{percentage | percent:'2.2-3' }}</td>
+            <td>{{employee.percentage | percent:'2.2-3' }}</td>
           </tr>
         </tbody>
       </table>

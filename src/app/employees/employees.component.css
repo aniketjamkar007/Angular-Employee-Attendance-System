@@ -1,4 +1,8 @@
 li {
     list-style: none;
-    align-content: center;
+    display: inline;
+}
+
+a:hover {
+    background-color: chocolate;
 }
