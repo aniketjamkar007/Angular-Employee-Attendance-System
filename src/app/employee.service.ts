@@ -9,7 +9,7 @@ import { tap } from 'rxjs/operators';
 export class EmployeeService {
   employeeList: Employee[];
   private firebaseUrl = 'https://ng-emp-attendance.firebaseio.com/employee.json';
-  // private JSONUrl = '/assets/employee.json';
+  private JSONUrl = '/assets/employee.json';
 
   constructor(private http: HttpClient) { }
 

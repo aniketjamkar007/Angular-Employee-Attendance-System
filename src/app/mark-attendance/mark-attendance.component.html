@@ -48,9 +48,11 @@
               </mat-form-field>
             </td>
             <td>
-              <button class="btn btn-primary" mat-raised-button (click)="calculateAttendance(employee.empID)">Calculate</button>
-            </td>
-            
+              <button 
+              class="btn btn-primary" 
+              mat-raised-button 
+              (click)="calculateAttendance(employee.empID)">Calculate</button>
+            </td>            
             <td>
               <label>{{employee.attendance}}</label>
             </td>
@@ -59,7 +61,10 @@
       </table>
     </div>
   </div>
-  <button class="btn btn-primary" (click)="onSave()">Save</button>
+  <button 
+  class="btn btn-primary" 
+  (click)="onSave()"
+  [routerLink] = "['/attendancesummary']">Save Attendance</button>
 </div>
 <div>
   {{startDate}} - {{endDate}}
