@@ -77,4 +77,8 @@ export class MarkAttendanceComponent implements OnInit {
       alert('Please select date greater than ' + this.dates[0].split('-')[2] );
     }
   }
+
+  onCheck(event: any, id: number) {
+    console.log(event.target.defaultValue);
+  }
 }

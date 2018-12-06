@@ -1,0 +1,23 @@
+<div class="container container-margin">
+  <!-- <p>
+    attendance-summary works!
+  </p> -->
+  <div class="row">
+    <div class="col-xs-12 col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2">
+      <div>
+        <button class="btn btn-primary" (click)= "getChartDataAndLabels()" [disabled]="!buttonFlag">Show Report</button>
+        <br>
+        <div style="display: block" *ngIf = "!buttonFlag" class="divmargin">
+          <canvas baseChart
+                  [datasets]="barChartData"
+                  [labels]="barChartLabel"
+                  [options]="barChartOptions"
+                  [legend]="barChartLegend"
+                  [chartType]="barChartType"
+                  (chartHover)="chartHovered($event)"
+                  (chartClick)="chartClicked($event)"></canvas>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

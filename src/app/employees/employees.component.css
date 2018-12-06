@@ -5,4 +5,5 @@ li {
 
 a:hover {
     background-color: chocolate;
+    text-decoration: none;
 }

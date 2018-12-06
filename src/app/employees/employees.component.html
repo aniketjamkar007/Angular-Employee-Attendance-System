@@ -28,6 +28,13 @@
                 [ngStyle]="{backgroundColor: rla3.isActive ? 'lightblue': 'transparent'}">
                 Employee Details
                 </a>
+                <a mat-tab-link
+                [routerLink]="['/attendancesummary']"
+                routerLinkActive #rla4="routerLinkActive"
+                [active]="rla4.isActive"
+                [ngStyle]="{backgroundColor: rla4.isActive ? 'lightblue': 'transparent'}">
+                Summary
+                </a>
             </nav>
         <!-- </div> -->
     <!-- </div>

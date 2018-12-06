@@ -12,6 +12,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { MatTabsModule } from '@angular/material/tabs';
 import { ChartsModule } from 'ng2-charts';
+import { MatCheckboxModule } from '@angular/material/checkbox';
 
 import { AppComponent } from './app.component';
 // import { MarkAttendanceComponent } from './emp-list/emp-list.component';
@@ -21,12 +22,14 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { EmpDetailsGuard } from './emp-details/emp-details.guard';
 import { MarkAttendanceComponent } from './mark-attendance/mark-attendance.component';
 import { EmpListComponent } from './emp-list/emp-list.component';
+import { AttendanceSummaryComponent } from './attendance-summary/attendance-summary.component';
 
 const appRoutes: Routes = [
   { path: 'emplist', component: EmpListComponent },
   { path: 'markattendance', component: MarkAttendanceComponent },
   { path: 'empdetails', canActivate: [EmpDetailsGuard], component: EmpDetailsComponent },
-  { path: 'empdetails/:id', canActivate: [EmpDetailsGuard], component: EmpDetailsComponent }
+  { path: 'empdetails/:id', canActivate: [EmpDetailsGuard], component: EmpDetailsComponent },
+  { path: 'attendancesummary', component: AttendanceSummaryComponent }
   // { path: 'pagenotfound', component: PageNotFoundComponent }
 ];
 
@@ -38,7 +41,8 @@ const appRoutes: Routes = [
     EmployeesComponent,
     PageNotFoundComponent,
     MarkAttendanceComponent,
-    EmpListComponent
+    EmpListComponent,
+    AttendanceSummaryComponent
   ],
   imports: [
     BrowserModule,
@@ -52,6 +56,7 @@ const appRoutes: Routes = [
     MatCardModule,
     MatTabsModule,
     ChartsModule,
+    MatCheckboxModule,
     HttpClientModule,
     RouterModule.forRoot(appRoutes)
   ],
